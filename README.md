@@ -5,3 +5,6 @@
 - task description max 100 and min 10
 - team member can mark task as done
 - tasks are loaded 10 by 10 element on scroll down
+# To run application
+- For api => update-migration for Repo layer
+- For client => npm i
