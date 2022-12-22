@@ -1,0 +1,11 @@
+p-panel {
+  width: 100% !important;
+}
+.ng-autocomplete {
+  width: 250px;
+}
+
+:host ::ng-deep .p-panel .p-panel-footer {
+  display: flex !important;
+  justify-content: right !important;
+}

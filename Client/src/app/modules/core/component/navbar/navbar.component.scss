@@ -1,0 +1,147 @@
+.navbar {
+  transition: all 0.2s ease-in-out;
+  z-index: 1001;
+}
+
+.scrolled {
+  background-color: white;
+  box-shadow: 0 1px 1px #ddd;
+  z-index: 1001;
+}
+
+.logo {
+  height: 70px;
+}
+
+.nav-link {
+  font-weight: 900;
+  font-size: 1.125rem;
+  text-align: start;
+  cursor: pointer;
+}
+
+/* -------------------------------- dir = ltr ------------------------------- */
+
+
+@media (min-width: 992px) {
+  .underLine::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    left: 0;
+    right: 0;
+    height: 3.5px;
+    background-color: #80c142;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+  }
+
+  // .dropdown-menu {
+  //   border: 0;
+  //   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+  //   border-radius: 8px;
+  //   text-align: center;
+  // }
+
+  // .dropdown-item.active,
+  // .dropdown-item:active {
+  //   background-color: #80c142;
+  //   color: white;
+  // }
+
+  // .dropdown-item:focus,
+  // .dropdown-item:hover {
+  //   color: white;
+  //   background-color: #80c142;
+  // }
+
+  // .dropdown-toggle::after {
+  //   margin-left: 0;
+  //   margin-inline-start: 0.5rem;
+  // }
+}
+
+.underLine:hover::before {
+  width: 50%;
+}
+
+@media only screen and (max-width: 992px) {
+  .navbar {
+    background-color: white;
+    box-shadow: 0 1px 1px #ddd;
+  }
+
+  .active {
+    color: #80c142 !important;
+  }
+
+  .active:after {
+    width: 0 !important;
+  }
+
+  .nav-link:hover:after {
+    width: 0;
+  }
+
+  .nav-item:not(:last-child) {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #b9b9b9;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-item .nav-link {
+    text-align: center;
+  }
+
+  .nav-link:hover {
+    color: #80c142 !important;
+  }
+
+  .login {
+    margin: auto;
+    background-color: transparent;
+    color: black !important;
+    border: 0 !important;
+    font-weight: 700;
+    font-size: 1.125rem !important;
+    padding: 8px 0 !important;
+  }
+
+  // .dropdown-menu {
+  //   border: 0;
+  //   text-align: center;
+  // }
+
+  // .dropdown-item.active,
+  // .dropdown-item:active {
+  //   background-color: #80c142;
+  //   color: #ffff !important;
+  // }
+}
+
+// .dropdown-item.active {
+//   border: 0 !important;
+// }
+
+// ::ng-deep {
+//   html:lang(ar) .dropdown-menu[data-bs-popper] {
+//     left: 50%;
+//     transform: translate(-70%, 0);
+//   }
+// }
+
+.hide-arrow::after {
+  visibility: hidden;
+}
+
+::ng-deep {
+  html:lang(ar) .dropdown-toggle::after {
+    margin-right: 0.5rem !important;
+    margin-left: auto;
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "Debit": {
+    "Header": "Debits",
+    "Type": "Type",
+    "BenefitPercentage": "Benefit Percentage",
+    "MaxMonths": "Max Months",
+    "CheckInstallmentRules": "Check Installment Rules",
+    "MustMaxMonths": "Must Max Months",
+    "AddDebit": "Add Debit",
+    "EditDebit": "Edit Debit"
+  },
+  "Tamper": {
+    "Header": "Tamper",
+    "Code": "Code",
+    "Amount": "Amount",
+    "IsAvailableInCharge": "Available In Charge ?",
+    "IsMustPay": "Is Must Pay ?",
+    "IsStopRecharge": "Is Stop Recharge ?",
+    "Notes": "Notes"
+  },
+  "ActivityType": {
+    "Header": "Activity Type",
+    "Name": "Name",
+    "Code": "Code",
+    "MinimumRecharge": "Minimum Recharge",
+    "MaximumCharge": "Maximum Charge"
+  },
+  "Tariff": {
+    "Header": "Tariff",
+    "Code": "Code",
+    "ActivityType": "Activity Type",
+    "ActivationDate": "Activation Date",
+    "ZeroReading": "Zero Reading",
+    "CustomerServiceMethod": "Customer Service Method"
+  },
+  "TariffStep": {
+    "Header": "Tariff Step",
+    "From": "From",
+    "To": "To",
+    "Price": "Price",
+    "CustomerServicePrice": "Customer Service Price",
+    "IsRecalculated": "Is Recalculated",
+    "RecalculationEdge": "Recalculation Edge",
+    "RecalculationAmount": "Recalculation Amount"
+  },
+  "Holiday": {
+    "Header": "Holiday",
+    "Date": "Date",
+    "AddHoliday": "Add Holiday",
+    "EditHoliday": "Edit Holiday"
+  },
+  "Swal": {
+    "titleDelete": "Are you sure?",
+    "confirmButtonTextDelete": "Yes, delete it!",
+    "cancelButtonTextDelete": "cancel",
+    "Deleted": "Deleted",
+    "IsUpdated": "Updated",
+    "IsAdded": "Added",
+    "Ok": "Ok"
+  },
+  "Shared": {
+    "Add": "Add",
+    "Edit": "Edit",
+    "Name": "Name",
+    "TableMessage": "Showing {{value1}} to {{value2}} of {{value3}} entries",
+    "TableFooter": "In total there are {{ value}}",
+    "Character": "Character"
+  },
+  "Validation": {
+    "IsRequired": "Required",
+    "MinimumLength": "Field minimum length is ",
+    "MaximumLength": "Field maximum length is ",
+    "MinimumValue": "The minimum for this field is 1 ."
+  }
+}

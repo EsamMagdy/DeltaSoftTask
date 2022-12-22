@@ -1,0 +1,19 @@
+.footer {
+  height: fit-content;
+  background-color: #404040;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 1.5rem;
+}
+
+.footer2 {
+  background-color: #059452 !important;
+}
+
+.py-1-5 {
+  padding: 0.8ex 0ex;
+}

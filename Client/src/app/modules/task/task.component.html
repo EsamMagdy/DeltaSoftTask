@@ -1,0 +1,163 @@
+<section class="vh-100">
+  <div class="container py-5">
+    <div
+      class="row d-flex justify-content-center align-items-center h-100"
+      infiniteScroll
+      [infiniteScrollDistance]="2"
+      [infiniteScrollThrottle]="50"
+      (scrolled)="onScroll()"
+      [scrollWindow]="true"
+    >
+      <div class="col">
+        <div class="card rounded-3">
+          <div class="card-body p-4">
+            <form
+              class="row row-cols-lg-auto g-3 justify-content-center align-items-center mb-4 pb-2"
+              [formGroup]="form"
+              (ngSubmit)="onSubmit()"
+              #taskForm="ngForm"
+              *ngIf="isAdmin"
+            >
+              <div class="col-3">
+                <label class="form-label" for="form1">Assign To User</label>
+                <!-- <input type="text" id="form1" class="form-control" /> -->
+                <div class="ng-autocomplete">
+                  <ng-autocomplete
+                    [data]="users"
+                    searchKeyword="username"
+                    (selected)="selectEvent($event)"
+                    (inputChanged)="onChangeSearch($event)"
+                    [itemTemplate]="itemTemplate"
+                    [notFoundTemplate]="notFoundTemplate"
+                    #auto
+                  >
+                  </ng-autocomplete>
+                  <ng-template #itemTemplate let-item>
+                    <a [innerHTML]="item.username"></a>
+                  </ng-template>
+
+                  <ng-template #notFoundTemplate let-notFound>
+                    <div [innerHTML]="notFound"></div>
+                  </ng-template>
+                </div>
+                <div
+                  *ngIf="
+                    AssignedToUser.hasError('required') &&
+                    (AssignedToUser.touched || taskForm.submitted)
+                  "
+                  class="p-1 error-msg small"
+                  role="alert"
+                >
+                  <i class="fas fa-times-circle me-2"></i>
+                  AssignedToUser is Required
+                </div>
+              </div>
+
+              <div class="col-3">
+                <label class="form-label" for="deliverDate">Deliver Date</label>
+                <input
+                  formControlName="deliverDate"
+                  type="text"
+                  id="deliverDate"
+                  class="form-control"
+                  bsDatepicker
+                  [minDate]="minDate"
+                />
+                <div
+                  *ngIf="
+                    DeliverDate.hasError('required') &&
+                    (DeliverDate.touched || taskForm.submitted)
+                  "
+                  class="p-1 error-msg small"
+                  role="alert"
+                >
+                  <i class="fas fa-times-circle me-2"></i>
+                  DeliverDate is Required
+                </div>
+              </div>
+
+              <div class="col-3">
+                <label class="form-label" for="description">Description</label>
+                <input
+                  type="text"
+                  id="description"
+                  class="form-control"
+                  formControlName="description"
+                />
+                <div
+                  *ngIf="
+                    Description.hasError('required') &&
+                    (Description.touched || taskForm.submitted)
+                  "
+                  class="p-1 error-msg small"
+                  role="alert"
+                >
+                  <i class="fas fa-times-circle me-2"></i>
+                  Description is Required
+                </div>
+                <div
+                  *ngIf="
+                    Description.hasError('minlength') &&
+                    (Description.touched || taskForm.submitted)
+                  "
+                  class="p-1 error-msg small"
+                  role="alert"
+                >
+                  <i class="fas fa-times-circle me-2"></i>
+                  Description minlength is 10
+                </div>
+                <div
+                  *ngIf="
+                    Description.hasError('maxlength') &&
+                    (Description.touched || taskForm.submitted)
+                  "
+                  class="p-1 error-msg small"
+                  role="alert"
+                >
+                  <i class="fas fa-times-circle me-2"></i>
+                  Description maxlength is 100
+                </div>
+              </div>
+              <div class="col-3">
+                <label class="form-label" for="form1"></label>
+                <button type="submit" class="btn btn-success ms-1">
+                  Add Task
+                </button>
+              </div>
+            </form>
+
+            <div class="row" *ngFor="let task of tasks?.items">
+              <p-panel [toggleable]="true" styleClass="mb-3">
+                <ng-template pTemplate="header">
+                  <strong class="col-9">{{ task?.assignedToUser?.username }}</strong>
+                  <strong class="col-2 text-success">
+                    {{ task?.deliverDate | date : "longDate" }}
+                  </strong>
+                </ng-template>
+                <!-- <ng-template pTemplate="icons"> </ng-template> -->
+                <p>
+                  {{ task?.description }}
+                </p>
+                <ng-template pTemplate="footer">
+                  <div class="field-checkbox" *ngIf="!task?.markAsDone">
+                    <p-checkbox
+                      [binary]="true"
+                      inputId="binary"
+                      (onChange)="onMarkTaskDone(task?.id)"
+                      label="Mark as Done"
+                      [(ngModel)]="task.isChecked"
+                    ></p-checkbox>
+                  </div>
+                  <strong class="text-danger" *ngIf="task?.markAsDone"
+                    >Done</strong
+                  >
+                </ng-template>
+              </p-panel>
+            </div>
+            <div *ngIf="!tasks?.items?.length">No Tasks</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

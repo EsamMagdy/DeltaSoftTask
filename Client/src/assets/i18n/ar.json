@@ -1,0 +1,79 @@
+{
+  "Debit": {
+    "Header": "الديون",
+    "Type": "نوع الدين",
+    "BenefitPercentage": "نسبة الفائدة",
+    "MaxMonths": "اقصى شهر",
+    "CheckInstallmentRules": "التحقق من قواعد التقسيط",
+    "MustMaxMonths": "يجب أن يكون الحد الأقصى للأشهر",
+    "AddDebit": "اضافة دين",
+    "EditDebit": "تعديل دين"
+  },
+  "Tamper": {
+    "Header": "حرف",
+    "Code": "الكود",
+    "Amount": "الكمية",
+    "IsAvailableInCharge": "متاح للشحن ؟",
+    "IsMustPay": "يجب ان يدفع ؟",
+    "IsStopRecharge": "هل توقف اعادة الشحن ؟",
+    "Notes": "ملحوظات",
+    "AddTamper": "اضافة حرف",
+    "EditTamper": "تعديل حرف"
+  },
+  "ActivityType": {
+    "Header": "نوع النشاط",
+    "Name": "الاسم",
+    "Code": "الكود",
+    "MinimumRecharge": "الحد الادنى",
+    "MaximumCharge": "الحد الاقصى",
+    "AddActivityType": "اضافة نوع نشاط",
+    "EditActivityType": "تعديل نوع نشاط"
+  },
+  "Tariff": {
+    "Header": "التعريفة",
+    "Code": "الكود",
+    "ActivityType": "نوع النشاط",
+    "ActivationDate": "تاريخ التفعيل",
+    "ZeroReading": "القراءة الصفرية",
+    "CustomerServiceMethod": "طريقة خدمة العملاء"
+  },
+  "TariffStep": {
+    "Header": "خطوة التعريفة",
+    "From": "من",
+    "To": "الى",
+    "Price": "السعر",
+    "CustomerServicePrice": "سعر خدمة العملاء",
+    "IsRecalculated": "تمت إعادة الحساب",
+    "RecalculationEdge": "حافة إعادة الحساب",
+    "RecalculationAmount": "مبلغ إعادة الحساب"
+  },
+  "Holiday": {
+    "Header": "الاجازة",
+    "Date": "التاريخ",
+    "AddHoliday": "اضافة اجازة",
+    "EditHoliday": "تعديل اجازة"
+  },
+  "Swal": {
+    "titleDelete": "هل انت متاكد ؟",
+    "confirmButtonTextDelete": "نعم ، احذفه!",
+    "cancelButtonTextDelete": "الغاء",
+    "Deleted": "تم الحذف",
+    "IsUpdated": "تم التعديل",
+    "IsAdded": "تم الاضافة",
+    "Ok": "تم"
+  },
+  "Shared": {
+    "Add": "اضافة",
+    "Edit": "تعديل",
+    "Name": "الاسم",
+    "TableMessage": "إظهار {{value1}} إلى {{value2}} من {{value3}} من الإدخالات",
+    "TableFooter": "في المجموع هناك {{value}}",
+    "Character": "احرف"
+  },
+  "Validation": {
+    "IsRequired": "مطلوب",
+    "MinimumLength": " الحد الأدنى لطول الحقل هو",
+    "MaximumLength": " الحد الاقصى لطول الحقل هو",
+    "MinimumValue": "الحد الادنى لهذا الحقل هوا 1"
+  }
+}

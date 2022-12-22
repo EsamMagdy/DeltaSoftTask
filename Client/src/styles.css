@@ -1,0 +1,120 @@
+.error-msg {
+  color: #dc3545 !important;
+  margin-top: 1px;
+  text-align: start;
+}
+.nav-tabs {
+  border: 0;
+  justify-content: center;
+  grid-gap: 16px;
+  gap: 16px;
+  font-size: large;
+}
+.custom-tab {
+  border: 0;
+  border-radius: 12px;
+  padding: 1ex 4ex !important;
+  text-align: center;
+  padding-inline-start: 6ex !important;
+  background: #efefef;
+  color: #000;
+  border-radius: 1.5px solid #efefef;
+}
+.custom-tab.active {
+  background-color: #242465;
+  color: #fff;
+  border: 1px solid #5757b7;
+}
+.text-222264 {
+  color: #222264;
+}
+.text-ff0000 {
+  color: #ff0000;
+}
+.text-639b4d {
+  color: #639b4d;
+}
+.aprrove {
+  color: #fff;
+  background-color: #28a745;
+  border-color: #28a745;
+}
+.redTxt {
+  color: #f00;
+  cursor: pointer;
+}
+input.ng-invalid.ng-touched {
+  border: red 1px solid;
+}
+p-dropdown.ng-invalid.ng-touched > .p-component {
+  border: red 1px solid;
+}
+/* p-calendar.ng-invalid.ng-touched {
+  border: red 1px solid !important;
+} */
+p-calendar.ng-invalid.ng-touched > span > input {
+  border: red 1px solid !important;
+}
+.p-datepicker-header {
+  direction: ltr !important;
+}
+textarea.ng-invalid.ng-touched {
+  border: red 1px solid;
+}
+:host ::ng-deep p-calendar > input.ng-invalid.ng-touched {
+  border: red 1px solid;
+}
+
+p-dropdown {
+  width: 100%;
+  min-width: 12rem;
+}
+
+.p-dropdown {
+  width: 100%;
+  /* border-radius: 5rem; */
+  /* border: 0; */
+  /* box-shadow: 0px 1px 10px #aaaaaa33; */
+  /* font-family: "Tajawal", sans-serif; */
+  /* padding: 0.3ex 1ex; */
+}
+
+.p-dropdown .p-dropdown-label.p-placeholder {
+  /* font-family: "Tajawal", sans-serif; */
+  /* font-weight: 600; */
+}
+
+.p-button {
+  background: #28a745 !important;
+  border: 1px solid #3ca20d !important;
+}
+.p-button:focus {
+  box-shadow: 0 0 0 0.2rem rgb(40 167 69 / 50%) !important;
+}
+.p-button .p-button-icon-left {
+  margin-left: 0.5rem;
+}
+
+.p-button-icon-only {
+  color: #fff;
+  background-color: #dc3545 !important;
+  border-color: #dc3545 !important;
+}
+.p-button-icon-only:focus {
+  box-shadow: 0 0 0 0.2rem rgb(220 53 69 / 50%);
+}
+agm-map {
+  height: 400px;
+}
+.theme-green .bs-datepicker-body table td span.selected {
+  /* background-color: #242465; */
+}
+.p-dropdown-clear-icon {
+  /* left: 50px !important;
+  direction: ltr; */
+}
+.p-dropdown .p-dropdown-clear-icon {
+  color: #6c757d;
+  right: auto;
+  left: 43px !important;
+}
